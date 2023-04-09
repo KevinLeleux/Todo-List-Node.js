@@ -6,7 +6,7 @@ This is a basic CRUD (Create, Read, Update, Delete) application in Node.js and P
 
 Create a .env file with the necessary variables indicated in .env.example
 
-`Run npm install` followed by `npm run dev`
+Run `npm install` followed by `npm run dev`
 
 ## Project Architecture
 
