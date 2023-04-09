@@ -8,7 +8,6 @@ checkboxs.forEach((checkbox) => {
     }
     fetch('/', {
       method: 'PUT',
-      mode: 'cors',
       body: JSON.stringify({
         completed: completed,
         id: checkbox.id,
@@ -16,12 +15,6 @@ checkboxs.forEach((checkbox) => {
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .catch((error) => {
-        console.error('Une erreur est survenue :', error); // Gère les erreurs
-      });
+    });
   });
 });
