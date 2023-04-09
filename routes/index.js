@@ -8,6 +8,8 @@ router.post('/', controller.addTodo);
 
 router.get('/delete/:id', controller.deleteTodo);
 
+router.put('/', controller.putTodo);
+
 router.use((req, res) => {
   res.status(404).render('404');
 });

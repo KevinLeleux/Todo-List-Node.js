@@ -32,6 +32,17 @@ const controller = {
       next();
     }
   },
+
+  putTodo: async (req, res, next) => {
+    try {
+      await dataMapper.putTodo(req.body);
+      const { rows } = await dataMapper.selectTodos();
+      res.render('index', { todoList: rows });
+    } catch (error) {
+      console.log(error);
+      next();
+    }
+  },
 };
 
 module.exports = controller;

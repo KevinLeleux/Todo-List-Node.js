@@ -5,6 +5,7 @@ require('dotenv').config();
 
 const PORT = process.env.PORT || 3000;
 
+server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 
 server.set('view engine', 'ejs');

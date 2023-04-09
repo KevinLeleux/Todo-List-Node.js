@@ -2,7 +2,7 @@ const client = require('../config/database');
 
 const dataMapper = {
   selectTodos: async () => {
-    return await client.query('SELECT * FROM todo');
+    return await client.query('SELECT * FROM todo ORDER BY id ASC');
   },
 
   insertTodo: async (todo) => {
@@ -11,6 +11,11 @@ const dataMapper = {
 
   deleteTodo: async (id) => {
     await client.query('DELETE FROM todo WHERE id = $1', [id]);
+  },
+
+  putTodo: async (data) => {
+    const { completed, id } = data;
+    await client.query('UPDATE todo SET completed = $1 WHERE id = $2', [completed, id]);
   },
 };
 
