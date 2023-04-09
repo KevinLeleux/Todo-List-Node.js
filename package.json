@@ -1,0 +1,21 @@
+{
+  "name": "nodejs-api-todo",
+  "version": "1.0.0",
+  "description": "A todo-list using Node.js and PostgreSQL",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "author": "Beholder",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "path": "^0.12.7",
+    "pg": "^8.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
