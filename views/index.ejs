@@ -15,7 +15,11 @@
     <% if (todoList.length > 0) { %>
     <ul>
       <% todoList.forEach(todo => { %>
-      <li><%= todo.todo %>	<a href="/delete/<%= todo.id %>">Delete</a></li>
+      <li>
+        <%= todo.todo %>
+        <input type="checkbox" name="completed" id="<%= todo.id %>" <% if (todo.completed) { %> checked <% } %> />
+        <a href="/delete/<%= todo.id %>">Delete</a>
+      </li>
       <% }); %>
     </ul>
     <% } %>
