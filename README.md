@@ -19,3 +19,12 @@ Run `npm install` followed by `npm run dev`
 **DataMapper:** ./controllers/dataMapper.js
 
 - The role of the dataMapper is to perform database queries and return the results as is (whether it's data or an error).
+
+## Database structure
+
+| id  | todo | completed |
+| --- | ---- | --------- |
+
+Create database using the create_db.sql file in the **data** folder
+
+`psql -U username -d database -f create_db.sql`
