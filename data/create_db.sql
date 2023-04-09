@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS "todo";
+
+CREATE TABLE IF NOT EXISTS "todo" (
+  "id" SERIAL PRIMARY KEY,
+  "todo" TEXT NOT NULL,
+  "completed" BOOLEAN NOT NULL DEFAULT false
+);
